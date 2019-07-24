@@ -31,6 +31,7 @@ MANIFEST
 *.manifest
 *.spec
 .direnv
+.envrc
 
 # Installer logs
 pip-log.txt
