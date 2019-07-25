@@ -56,10 +56,10 @@ def is_initial(part):
 def has_apostrophe(part):
     return RE_APOSTROPHE.match(part)
 
-    # Adjusting exceptions like
-    # "Ludwig Mies van der Rohe" => ["Ludwig",  "Mies van der Rohe"   ]
-    # "Juan Martín de la Cruz Gómez" => ["Juan Martín", "de la Cruz Gómez"]
-    # "Javier Reyes de la Barrera" => ["Javier",  "Reyes de la Barrera" ]
-    # Rosa María Pérez Martínez Vda. de la Cruz => ["Rosa María", "Pérez Martínez Vda. de la Cruz"]
-    # def adjust_exceptions():
-    #     if re.search(r'^(van der|(vda\. )?de la \w+$)', self.last_names):
+# Adjusting exceptions like
+# "Ludwig Mies van der Rohe" => ["Ludwig",  "Mies van der Rohe"   ]
+# "Juan Martín de la Cruz Gómez" => ["Juan Martín", "de la Cruz Gómez"]
+# "Javier Reyes de la Barrera" => ["Javier",  "Reyes de la Barrera" ]
+# Rosa María Pérez Martínez Vda. de la Cruz => ["Rosa María", "Pérez Martínez Vda. de la Cruz"]
+# def adjust_exceptions():
+#     if re.search(r'^(van der|(vda\. )?de la \w+$)', self.last_names):
