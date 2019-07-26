@@ -28,7 +28,7 @@ CASE_SOLUTIONS = [
     ["Noda bi-Yehudah", ["Noda", "bi-Yehudah"]],
     ["Alessandro Del Piero", ["Alessandro", "Del Piero"]],
     # Two lastnames
-    # ["Maria del Carmen Menendez", ["Maria", "del Carmen Menendez"]],
+    ["Maria del Carmen Menendez", ["Maria", "del Carmen Menendez"]],
     ["Thomas G. Della Fave", ["Thomas G.", "Della Fave"]],
     # Exceptions?
     ["Ludwig Mies van der Rohe", ["Ludwig", "Mies van der Rohe"]],
@@ -40,28 +40,28 @@ CASE_SOLUTIONS = [
     [", van  helsing", ["", "van helsing"]],
     #  Names with honorifics
     ["Mr. William R. Hearst, III", ["William R.", "Hearst"]],
-    # ["William Randolph Hearst", ["William Randolph", "Hearst"]],
     ["William R. De La Cruz", ["William R.", "De La Cruz"]],
     ["Mr. William R. De La Cruz III", ["William R.", "De La Cruz"]],
     ["William De Cruz", ["William", "De Cruz"]],
     ["William De La Cruz", ["William", "De La Cruz"]],
     ["William A. B. De La Cruz", ["William A. B.", "De La Cruz"]],
-    # ["James Hugh Calum Laurie", ["James Hugh Calum", "Laurie"]],
-    # [
-    #     "Kiefer William Frederick Dempsey George Rufus Sutherland",
-    #     ["Kiefer William Frederick Dempsey George Rufus", "Sutherland"],
-    # ],
     ["William Hearst", ["William", "Hearst"]],
     ["William Hearst Jr", ["William", "Hearst"]],
     ["William", ["William", ""]],
     ["", ["", ""]],
 ]
 
+# ["James Hugh Calum Laurie", ["James Hugh Calum", "Laurie"]],
+# [
+#     "Kiefer William Frederick Dempsey George Rufus Sutherland",
+#     ["Kiefer William Frederick Dempsey George Rufus", "Sutherland"],
+# ],
 
 CASE_SOLUTIONS_TWO_NAMES = [
     # Two names
     ["William Henry Harrison", ["William Henry", "Harrison"]],
     ["John Quincy Adams", ["John Quincy", "Adams"]],
+    ["William Randolph Hearst", ["William Randolph", "Hearst"]],
     # German
     ["Johann Wolfgang von Goethe", ["Johann Wolfgang", "von Goethe"]],
     # Spanish-speaking countries
