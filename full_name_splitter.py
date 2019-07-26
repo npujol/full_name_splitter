@@ -44,8 +44,9 @@ RE_EXCEPTIONS = re.compile(r"^(van der|(vda\.)? de la \w+)", re.IGNORECASE)
 
 
 class Splitter(object):
-    def __init__(self, full_name):
+    def __init__(self, full_name, cant_names=1):
         self._full_name = full_name
+        self._cant_names = cant_names
         self._first_names = []
         self._last_names = []
         self.clean_fullname()
@@ -65,6 +66,7 @@ class Splitter(object):
 
     def split(self):
         parts = self._full_name.split(" ")
+        # cant_words = len(parts)
         while parts:
             part = parts.pop(0)
             print(is_compoused(part))
@@ -72,7 +74,8 @@ class Splitter(object):
                 is_prefix(part)
                 or has_apostrophe(part)
                 or is_compoused(part)
-                or (self._first_names and not is_initial(part))
+                or (len(self._first_names) == self._cant_names and not is_initial(part))
+                or len(self._first_names) == self._cant_names
             ):
                 self._last_names.append(part)
                 break
