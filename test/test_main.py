@@ -30,13 +30,6 @@ CASE_SOLUTIONS = [
     # Two lastnames
     # ["Maria del Carmen Menendez", ["Maria", "del Carmen Menendez"]],
     ["Thomas G. Della Fave", ["Thomas G.", "Della Fave"]],
-    # Two names
-    # ["William Henry Harrison", ["William Henry", "Harrison"]],
-    # ["John Quincy Adams", ["John Quincy", "Adams"]],
-    # German
-    # ["Johann Wolfgang von Goethe", ["Johann Wolfgang", "von Goethe"]],
-    # Spanish-speaking countries
-    # ["Juan Martín de la Cruz Gómez", ["Juan Martín", " de la Cruz Gómez"]],
     # Exceptions?
     ["Ludwig Mies van der Rohe", ["Ludwig", "Mies van der Rohe"]],
     ["Javier Reyes de la Barrera", ["Javier", "Reyes de la Barrera"]],
@@ -65,8 +58,26 @@ CASE_SOLUTIONS = [
 ]
 
 
+CASE_SOLUTIONS_TWO_NAMES = [
+    # Two names
+    ["William Henry Harrison", ["William Henry", "Harrison"]],
+    ["John Quincy Adams", ["John Quincy", "Adams"]],
+    # German
+    ["Johann Wolfgang von Goethe", ["Johann Wolfgang", "von Goethe"]],
+    # Spanish-speaking countries
+    ["Juan Martín de la Cruz Gómez", ["Juan Martín", "de la Cruz Gómez"]],
+]
+
+
 @pytest.mark.parametrize("name,expected", CASE_SOLUTIONS)
 def test_split_names(name, expected):
     s = Splitter(name)
+    result = [s.first_names, s.last_names]
+    assert result == expected
+
+
+@pytest.mark.parametrize("name,expected", CASE_SOLUTIONS_TWO_NAMES)
+def test_split_names(name, expected):
+    s = Splitter(name, cant_names=2)
     result = [s.first_names, s.last_names]
     assert result == expected
