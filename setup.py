@@ -14,7 +14,7 @@ setup(
     author="Naivy Pujol Méndez",
     author_email="naivy.luna@gmail.com",
     license="MIT",
-    packages=["full_name_splitter"],
-    long_description=read("README"),
+    py_modules=["full_name_splitter"],
+    long_description=read("README.md"),
     zip_safe=False,
 )
